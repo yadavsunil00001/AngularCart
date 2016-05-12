@@ -1,0 +1,95 @@
+body {
+  /*font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;*/
+   background-color: #fafafa;
+}
+
+a {
+  color: #000000 !important;
+}
+
+.input-field input:-webkit-autofill ~ label, .input-field textarea:-webkit-autofill ~ label, .input-field select:-webkit-autofill ~ label {
+    -moz-transform: translateY(-140%);
+    -ms-transform: translateY(-140%);
+    -webkit-transform: translateY(-140%);
+    -o-transform: translateY(-140%);
+    transform: translateY(-140%);
+    font-size: 0.8rem;
+}
+
+.input-field input ~ label, .input-field textarea ~ label, .input-field select ~ label {
+    -moz-transform: translateY(-140%);
+    -ms-transform: translateY(-140%);
+    -webkit-transform: translateY(-140%);
+    -o-transform: translateY(-140%);
+    transform: translateY(-140%);
+    font-size: 0.8rem;
+}
+
+.border {
+	border-bottom: solid 1px #444;
+}
+
+.bg-clr {
+	background-color: #444   !important;
+  color : #01D8FF !important;
+}
+
+.card-action  {
+	padding: 0px !important;
+}
+
+.card-content {
+    padding: 5px !important;
+}
+.ft-clr {
+    color : #000000 !important;
+}
+
+select {
+    display : block !important;
+}
+
+.selectedType {
+    padding : 0px !important;
+    color : #000000 !important;
+}
+
+.strikethrough {
+    text-decoration: line-through;
+}
+
+.dropdown-content {
+  background-color: #FFFFFF;
+  margin: 0;
+  display: none;
+  min-width: 300px;
+  max-height: auto;
+  overflow: hidden;
+  position: absolute;
+}
+
+.shake {
+  -webkit-animation-name: thumb;
+  -webkit-animation-duration: 200ms;
+  -webkit-transform-origin:50% 50%;
+  -webkit-animation-iteration-count: 2;
+  -webkit-animation-timing-function: linear;
+}
+.animate {
+  -webkit-transition: all ease-in-out 0.5s;
+}
+
+@-webkit-keyframes thumb {
+  0% { -webkit-transform: scale(1); }
+  50% { -webkit-transform: scale(0.8); }
+  100% { -webkit-transform: scale(1); }
+}
+
+.logo{
+  height:63px;
+  width: 63px;
+}
+
+.bg-sidenav{
+  background-color: #A28DB5;
+}

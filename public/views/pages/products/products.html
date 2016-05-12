@@ -1,0 +1,38 @@
+<div class ="container">
+	<div class="row">
+		<div class="col s12 m12 l4" ng-repeat="product in products track by $index">
+			<div class="card hoverable large card-{{$index}}">
+				<div class="card-title bg-clr center">{{product.name}}</div>
+				<div class="card-image border">
+					<img class="responsive-img img-{{$index}}" ng-src="{{product.img}}">
+					<div class="card-title selectedType">Tetrapack {{selType.volume}}</div>
+				</div>
+				<div class="card-content">
+					<div class="row">
+						
+						<div class="col l6 m6 s6">
+							<label for="price">price</label>
+							<p id="price" class="">&#8377 {{selType.price * Qty}}</p>
+						</div>
+						<div class="col l6 m6 s6">
+							<label for="mrp">MRP</label>
+							<p id="mrp" class="strikethrough"> &#8377 {{selType.MRP * Qty}}</p>
+						</div>
+					
+						<div class="input-field col l6 s6 m6">
+							<input id="qty" type="text" class="validate" ng-model="Qty" required>
+							<label for="qty">Qty</label>
+						</div>
+						<div class="input-field col l6 s6 m6">
+					    <select class="" name="selbox" ng-init="selType=product.type[0]" ng-model="selType" ng-options="type.volume for type in product.type"></select>
+					    <label for="selbox">select volume</label>
+						</div>
+					</div>
+				</div>
+				<div class="card-action">
+					<a class="waves-effect waves-light btn bg-clr col l12 s12 m12 add-to-cart-{{$index}}" ng-click="addToCart($index,product.id,selType,Qty,product.name,product.img)"><i class="material-icons prefix">add_shopping_cart</i> Add to Cart</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

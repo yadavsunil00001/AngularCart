@@ -1,0 +1,47 @@
+ <div class="navbar-fixed">
+  <nav>
+    <div class="nav-wrapper white">
+      <a ng-href="" class="brand-logo"><img class="responsive-img logo" ng-src="/images/dipper.jpg"></a>
+      <ul id="dropdown1" class="dropdown-content collection">
+        <li class="collection-item avatar" ng-show="cart.length == 0">
+          <i class="circle material-icons">cloud_queue</i>
+          <span class="title">Cart Empty</span>
+          
+        </li>
+        <li class="collection-item avatar" ng-repeat="product in cart track by $index">
+          <img ng-src="{{product.img}}" alt="" class="responsive-img circle">
+          <span class="title">{{product.name}}</span>
+          <p><b class="grey">{{product.seltype.volume}} X {{product.qty}}</b>  <strong>&#8377 {{product.seltype.price * product.qty}} </strong></p>
+          <a ng-click="remove($index)" class="secondary-content"><i class="material-icons">clear</i></a>
+        </li>
+        <li class="collection-item avatar" ng-hide="cart.length == 0">
+          <i class="circle material-icons">attach_money</i>
+          <span class="title">Total : <strong>&#8377 {{total}} </strong></span>
+        </li>
+      </ul>
+
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a class="dropdown-button shopping-cart" href="#!" data-activates="dropdown1"><i class="material-icons right">shopping_cart</i></a></li>
+      </ul>
+
+      <ul class="side-nav bg-sidenav" id="slide-out">
+        <li class="collection-item avatar" ng-show="cart.length == 0">
+          <i class="circle material-icons">hourglass_empty</i>
+          <span class="title">Cart Empty</span>
+          <a href="#!" class="secondary-content"><i class="material-icons">exposure_zero</i></a>
+        </li>
+        <li class="collection-item avatar" ng-repeat="product in cart track by $index">
+          <img ng-src="{{product.img}}" alt="" class="responsive-img circle">
+          <span class="title">{{product.name}}</span>
+          <p><b class="grey">{{product.seltype.volume}} X {{product.qty}}</b>  <strong>&#8377 {{product.seltype.price * product.qty}} </strong></p>
+          <a ng-click="remove($index)" class="secondary-content"><i class="material-icons">clear</i></a>
+        </li>
+        <li class="collection-item avatar" ng-hide="cart.length == 0">
+          <i class="circle material-icons">attach_money</i>
+          <span class="title">Total : <strong>&#8377 {{total}} </strong></span>
+        </li>
+      </ul>
+       <a href="#" data-activates="slide-out" class="button-collapse black"><i class="material-icons">shopping-cart</i></a>
+    </div>
+  </nav>
+</div>
